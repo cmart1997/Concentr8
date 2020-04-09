@@ -3,6 +3,12 @@ from flask import render_template
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    count = 0 
+    print(count)
+    return render_template('index.html',count = count)
 
+@app.route('/#')
+def count():
+    count += 1
+    return render_template('index.html',count = count)
 
