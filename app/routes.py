@@ -7,7 +7,7 @@ def index():
     return render_template('index.html')
 
 counter = 0
-@app.route('/click',)
+@app.route('/click',methods=['GET', 'POST'])
 def count():
     global counter
     if request.method == 'POST':
