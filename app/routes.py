@@ -1,14 +1,16 @@
 from app import app
-from flask import render_template
+from app.counter import *
+from flask import Flask, flash, redirect, render_template, request, url_for
 
 @app.route('/')
 def index():
-    count = 0 
-    print(count)
-    return render_template('index.html',count = count)
+    return render_template('index.html')
 
-@app.route('/#')
+counter = 0
+@app.route('/click',)
 def count():
-    count += 1
-    return render_template('index.html',count = count)
-
+    global counter
+    if request.method == 'POST':
+        counter = counter + 1
+    
+    return render_template('click.html', counter = counter)
