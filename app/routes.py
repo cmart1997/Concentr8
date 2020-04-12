@@ -13,4 +13,7 @@ def count():
     if request.method == 'POST':
         counter = counter + 1
     
+    else: 
+        counter = 0
+    
     return render_template('click.html', counter = counter)
