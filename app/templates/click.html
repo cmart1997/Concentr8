@@ -4,17 +4,17 @@
 
   <form method="post" >
     <dl>
-      <center><input id = "track_button" class="marker"
+      <center><input href = "/click"id = "track_button" class="marker"
         type="submit"  name = "click" value="SLACKIN' "></center>
       <br/>
       <h1> {{ counter }} </h1>
     </dl>
   </form>
 
-  <form method = "get">
+  <form method = "get" action="/">
     <center>
-      <input id = "main_button" class = "button"
-        type="submit"  name = "click" value="DONE">
+      <input href = "" id = "main_button" class = "button"
+        type="submit"  value="DONE">
     </center> 
   </form> 
 {% endblock %}
